@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>内外整骨院｜腰痛治療なら内外整骨院｜夜20時まで受付</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP',sans-serif;font-size:15px;color:#333;background:#fff;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.clearfix::after{content:'';display:block;clear:both}
+.inner{max-width:840px;margin:0 auto;padding:0 24px}
+.sec-ttl{text-align:center;margin-bottom:10px}
+.sec-ttl span{font-size:26px;font-weight:900;display:inline-block;background:linear-gradient(transparent 50%,#fbf1ae 0%);padding:0 6px;line-height:1.5}
+.sec-sub{text-align:center;font-size:13px;color:#888;margin-bottom:32px;line-height:1.7}
+.yellow-line{background:linear-gradient(transparent 50%,#fbf1ae 0%)}
+.f-color{color:#f04261}
+
+/* ===== HEADER ===== */
+#top{background:#fff;border-bottom:3px solid #f0540c;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.hd-inner{max-width:1040px;margin:0 auto;padding:0 20px;display:flex;align-items:stretch;justify-content:space-between;min-height:68px}
+.hd-logo{display:flex;align-items:center;gap:12px;padding:10px 0}
+.hd-logo .logo-icon{width:44px;height:44px;background:#f0540c;border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:20px;flex-shrink:0}
+.hd-logo .logo-txt h1{font-size:16px;font-weight:900;line-height:1.2;color:#222}
+.hd-logo .logo-txt p{font-size:10px;color:#888;margin-top:2px}
+.hd-nav{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:500}
+.hd-nav a{color:#555;transition:color .2s}
+.hd-nav a:hover{color:#f0540c}
+.hd-contact{display:flex;align-items:center;gap:8px;padding:8px 0}
+.hd-tel-block{text-align:right}
+.hd-tel-block .tel{font-size:20px;font-weight:900;color:#f0540c;line-height:1;letter-spacing:.03em}
+.hd-tel-block .hours{font-size:10px;color:#888;margin-top:2px}
+.hd-btn-line{padding:9px 14px;background:#06c755;color:#fff;border-radius:6px;font-size:12px;font-weight:700;white-space:nowrap}
+.hd-btn-tel{padding:9px 14px;background:#f0540c;color:#fff;border-radius:6px;font-size:12px;font-weight:700;white-space:nowrap}
+
+/* ===== FV ===== */
+#visual{position:relative;overflow:hidden}
+.visual-img{
+  width:100%;aspect-ratio:16/7;
+  background-color:#1a1a1a;
+  background-image:url('fv.jpg');
+  background-size:cover;background-position:center top;
+  display:flex;align-items:center;justify-content:center;position:relative
+}
+.visual-img::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.visual-copy{position:relative;z-index:1;text-align:center;padding:40px 20px;width:100%}
+.visual-copy .eyebrow{display:inline-block;background:#f0540c;color:#fff;font-size:12px;font-weight:700;padding:5px 18px;border-radius:999px;letter-spacing:.1em;margin-bottom:20px}
+.visual-copy h2{font-size:52px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.visual-copy h2 em{font-style:normal;background:linear-gradient(transparent 50%,rgba(251,241,174,.5) 0%);color:#fbf1ae}
+.visual-copy p{font-size:16px;color:rgba(255,255,255,.85);margin-bottom:28px;line-height:1.8}
+.visual-copy .cta-wrap{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.visual-copy .cta-wrap a{padding:16px 32px;border-radius:8px;font-weight:900;font-size:15px}
+.visual-copy .cta-line{background:#06c755;color:#fff;box-shadow:0 6px 20px rgba(6,199,85,.4)}
+.visual-copy .cta-tel{background:#f0540c;color:#fff;box-shadow:0 6px 20px rgba(240,84,12,.4)}
+
+/* ===== 実績バナー ===== */
+.main-bnr{padding:40px 0;background:#fff;border-bottom:1px solid #f0e0d0}
+.achievement .nums{display:grid;grid-template-columns:repeat(4,1fr);border:3px solid #f0540c;border-radius:8px;overflow:hidden;margin-bottom:24px}
+.achievement .nums .item{padding:22px 10px;text-align:center;border-right:1px solid #f0d0c0}
+.achievement .nums .item:last-child{border-right:none}
+.achievement .nums .item .n{font-size:36px;font-weight:900;color:#f0540c;line-height:1}
+.achievement .nums .item .n sub{font-size:13px;font-weight:700}
+.achievement .nums .item .l{font-size:11px;color:#777;margin-top:4px}
+.achievement .photo{background:#f9f3e8;border:2px solid #f0d9c8;border-radius:8px;padding:52px 20px;text-align:center;color:#aaa;font-size:13px}
+.achievement .photo .ph-icon{font-size:52px;margin-bottom:10px}
+
+/* ===== 電話CTA ===== */
+.tel-cta{background:#f0540c;padding:48px 20px;text-align:center}
+.tel-cta .ttl{color:rgba(255,255,255,.9);font-size:14px;font-weight:600;letter-spacing:.08em;margin-bottom:6px}
+.tel-cta .num{display:block;font-size:52px;font-weight:900;color:#fff;letter-spacing:.05em;line-height:1.1;margin-bottom:6px}
+.tel-cta .hours{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:22px}
+.tel-cta .line-link{display:inline-flex;align-items:center;gap:10px;padding:15px 36px;background:#06c755;color:#fff;border-radius:8px;font-weight:900;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+
+/* ===== コミック ===== */
+#comic{padding:72px 0;background:#fff5ee}
+.comic-hd{text-align:center;padding:0 24px 28px}
+.comic-hd h2{font-size:22px;font-weight:900;line-height:1.65}
+.comic-hd h2 em{font-style:normal;color:#f0540c;background:linear-gradient(transparent 50%,#fbf1ae 0%)}
+.comic-hd p{font-size:13px;color:#888;margin-top:8px}
+.comic-swiper{max-width:840px;margin:0 auto;overflow:hidden;padding:0 24px 44px}
+.comic-swiper .swiper-slide{background:#fff;border:2px solid #f0d9c8;border-radius:8px;overflow:hidden}
+.comic-swiper .slide-img{background:repeating-linear-gradient(45deg,#fff5ee,#fff5ee 8px,#fde8d8 8px,#fde8d8 16px);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#bbb;font-size:13px}
+.comic-swiper .slide-img .slide-num{width:36px;height:36px;background:#f0540c;color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:16px;margin-bottom:6px}
+.comic-swiper .slide-cap{padding:20px 22px}
+.comic-swiper .slide-cap strong{display:block;font-size:15px;font-weight:700;margin-bottom:8px;color:#222}
+.comic-swiper .slide-cap p{font-size:13px;line-height:1.9;color:#555}
+.swiper-button-prev,.swiper-button-next{color:#f0540c!important}
+.swiper-pagination-bullet-active{background:#f0540c!important}
+
+/* ===== 口コミ ===== */
+#kchkm{padding:72px 0;background:#fff}
+.tab-nav{display:flex;border-bottom:3px solid #f0540c;margin-bottom:0}
+.tab-nav li{list-style:none;flex:1}
+.tab-nav li a{display:block;padding:11px 6px;background:#f5f5f5;text-align:center;font-size:12px;font-weight:700;color:#888;border:1px solid #e0e0e0;border-bottom:none;border-radius:6px 6px 0 0;cursor:pointer;transition:all .2s}
+.tab-nav li.active a,.tab-nav li a:hover{background:#f0540c;color:#fff;border-color:#f0540c}
+.tab-pane{display:none;padding-top:20px}
+.tab-pane.active{display:block}
+.review-list{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
+.review-card{background:#fff5ee;border:1px solid #f0d9c8;border-top:3px solid #f0540c;border-radius:6px;padding:20px 22px}
+.review-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.r-stars{color:#f59e0b;font-size:16px;letter-spacing:2px}
+.r-name{font-weight:700;font-size:14px}
+.review-card p{font-size:14px;line-height:1.9;color:#444}
+.google-btn{text-align:center}
+.google-btn a{display:inline-block;padding:12px 28px;background:#f0540c;color:#fff;border-radius:6px;font-weight:700;font-size:14px}
+.ekiten-score{margin-bottom:20px}
+.ekiten-score-link{display:flex;align-items:center;gap:10px;padding:14px 18px;background:#fff5ee;border:2px solid #f0d9c8;border-radius:8px;flex-wrap:wrap;transition:background .2s}
+.ekiten-score-link:hover{background:#fde8d8}
+.ekiten-logo{background:#e84646;color:#fff;font-size:12px;font-weight:900;padding:3px 10px;border-radius:4px;letter-spacing:.05em;flex-shrink:0}
+.ekiten-stars{color:#f59e0b;font-size:18px;letter-spacing:2px}
+.ekiten-num{font-size:26px;font-weight:900;color:#222;line-height:1}
+.ekiten-count{font-size:13px;color:#888}
+.ekiten-arrow{margin-left:auto;font-size:13px;font-weight:700;color:#f0540c}
+.ekiten-widget-slot{min-height:80px;border:2px dashed #f0d9c8;border-radius:8px;padding:20px;background:#fffaf7}
+.widget-ph-txt{font-size:12px;color:#bbb;text-align:center;line-height:2}
+
+/* ===== 症状チェックリスト ===== */
+#checklist{padding:72px 0;background:#fff8f4}
+.cl-badge{display:inline-block;background:#f0540c;color:#fff;font-size:12px;font-weight:700;padding:5px 18px;border-radius:999px;letter-spacing:.1em;margin-bottom:16px}
+#checklist h2{font-size:28px;font-weight:900;line-height:1.55;margin-bottom:32px;color:#222;text-align:center}
+#checklist h2 em{font-style:normal;background:linear-gradient(transparent 50%,#fbf1ae 0%)}
+.check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:36px}
+.check-item{display:flex;align-items:flex-start;gap:10px;background:#fff;border:1px solid #f0d9c8;border-left:4px solid #f0540c;border-radius:0 6px 6px 0;padding:14px 16px;font-size:14px;font-weight:600;color:#333;line-height:1.5}
+.check-item .ci{color:#f0540c;font-weight:900;flex-shrink:0;font-size:17px;line-height:1.3}
+.cl-result{background:#f0540c;border-radius:12px;padding:28px 36px;text-align:center}
+.cl-result p{font-size:14px;color:rgba(255,255,255,.9);margin-bottom:8px}
+.cl-big{font-size:22px;font-weight:900;color:#fff;line-height:1.5;margin:0}
+.cl-big em{font-style:normal;background:linear-gradient(transparent 50%,rgba(251,241,174,.45) 0%)}
+
+/* ===== 腸腰筋セクション ===== */
+#choyokin{padding:72px 0;background:#fff}
+#choyokin .sec-hd{text-align:center;margin-bottom:44px}
+#choyokin .sec-hd h2{font-size:28px;font-weight:900;line-height:1.6;color:#222}
+#choyokin .sec-hd h2 em{font-style:normal;background:linear-gradient(transparent 50%,#fbf1ae 0%)}
+#choyokin .sec-hd p{font-size:14px;color:#888;margin-top:10px}
+.why-blocks{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:52px}
+.why-block{background:#fff5ee;border-top:4px solid #f0540c;border-radius:0 0 8px 8px;padding:26px 22px}
+.why-block .wb-tag{font-size:11px;font-weight:900;color:#f0540c;letter-spacing:.12em;margin-bottom:10px}
+.why-block h3{font-size:16px;font-weight:900;line-height:1.55;color:#222;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid #f0d9c8}
+.why-block p{font-size:13px;line-height:2;color:#52371f}
+.why-block strong{color:#f0540c}
+.method-wrap{background:#2a1a0a;border-radius:12px;padding:44px 36px}
+.method-hd{text-align:center;margin-bottom:32px}
+.method-hd p{font-size:12px;color:rgba(255,255,255,.6);letter-spacing:.12em;margin-bottom:8px}
+.method-hd h3{font-size:24px;font-weight:900;color:#fff;line-height:1.5}
+.method-hd h3 em{font-style:normal;background:linear-gradient(transparent 50%,rgba(251,241,174,.4) 0%);color:#fbf1ae}
+.method-steps{display:grid;grid-template-columns:1fr;gap:16px}
+.method-step{background:#fff;border-radius:8px;padding:28px 20px;text-align:center}
+.step-num{display:inline-block;background:#f0540c;color:#fff;font-size:11px;font-weight:900;padding:3px 16px;border-radius:999px;letter-spacing:.1em;margin-bottom:12px}
+.step-icon{font-size:40px;margin-bottom:12px}
+.method-step h4{font-size:15px;font-weight:900;color:#222;margin-bottom:10px;line-height:1.4}
+.method-step p{font-size:12px;line-height:1.9;color:#52371f}
+
+/* ===== セミナー ===== */
+.seminar-wrap{margin-top:48px;background:#fff;border-radius:10px;padding:32px 28px;border:1px solid #ffe0d0}
+.seminar-tag{display:inline-block;background:#f0540c;color:#fff;font-size:11px;font-weight:900;letter-spacing:.1em;padding:3px 14px;border-radius:999px;margin-bottom:14px}
+.seminar-wrap h3{font-size:19px;font-weight:900;color:#222;line-height:1.5;margin-bottom:8px}
+.seminar-subtitle{font-size:13px;font-weight:700;color:#f0540c;margin-bottom:18px}
+.seminar-photos{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
+.seminar-photos-3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.seminar-photos img,.seminar-photos-3 img{width:100%;height:160px;object-fit:cover;border-radius:6px}
+.seminar-wrap p{font-size:13px;line-height:1.9;color:#555}
+@media(max-width:640px){
+  .seminar-photos{grid-template-columns:1fr 1fr}
+  .seminar-photos-3{grid-template-columns:repeat(3,1fr)}
+  .seminar-photos img,.seminar-photos-3 img{height:100px}
+}
+
+/* ===== 8つの安心 ===== */
+#point{padding:72px 0;background:#f9f3e8}
+.point-bg{background:repeating-linear-gradient(45deg,rgba(240,84,12,.04),rgba(240,84,12,.04) 1px,transparent 1px,transparent 8px);border-radius:8px;padding:20px}
+.point-bg .box{border-top:4px solid #f0540c;position:relative;padding:44px 3% 28px;box-shadow:0 2px 10px rgba(0,0,0,.09);margin-bottom:28px;background:#fff;border-radius:0 0 6px 6px}
+.point-bg .box:last-child{margin-bottom:0}
+.box .icon-num{position:absolute;top:-17px;left:50%;transform:translateX(-50%);background:#f0540c;color:#fff;border-radius:999px;padding:3px 20px;font-size:12px;font-weight:900;letter-spacing:.2em;white-space:nowrap}
+.box h3{width:60%;float:right;font-size:19px;font-weight:900;line-height:1.55;margin-bottom:12px;color:#222}
+.box .box-img{width:34%;float:left;margin-right:4%;border-radius:6px;background:#fff5ee;border:2px solid #f0d9c8;aspect-ratio:4/3;display:grid;place-items:center;font-size:32px}
+.box .box-text{width:60%;float:right;font-size:13px;line-height:1.9;color:#52371f}
+.box::after{content:'';display:block;clear:both}
+
+/* ===== 施術の流れ ===== */
+#flow{padding:72px 0;background:#fff}
+.flow-list-col{display:flex;flex-direction:column;gap:10px}
+.flow-item{display:block;padding:24px;background:#fff;border:1px solid #f0d9c8;border-top:3px solid #f0540c;border-radius:6px}
+.flow-item-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.flow-item .f-num{width:46px;height:46px;background:#f0540c;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:900;flex-shrink:0}
+.flow-item .f-title{font-size:18px;font-weight:900;color:#222;background:linear-gradient(transparent 50%,#fbf1ae 0%);display:inline}
+.flow-item-inner{display:flex;gap:20px;align-items:flex-start}
+.flow-item .f-body{flex:1;min-width:0;font-size:13px;color:#555;line-height:1.9}
+.flow-item .f-img{width:45%;flex-shrink:0;border-radius:8px;overflow:hidden;aspect-ratio:3/2;position:relative;background:#fff5ee;border:2px solid #f0d9c8}
+.flow-item .f-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ===== 院長 ===== */
+#director{padding:72px 0;background:#f9f3e8}
+.director-card{background:#fff;border-top:4px solid #f0540c;border-radius:0 0 8px 8px;padding:32px;display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start}
+.dir-photo{background:#fff5ee;border:2px solid #f0d9c8;border-radius:8px;aspect-ratio:3/4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#aaa;font-size:12px}
+.dir-photo .ph{font-size:44px}
+.dir-body h2{font-size:22px;font-weight:900;line-height:1.6;margin-bottom:16px}
+.dir-body h2 em{font-style:normal;background:linear-gradient(transparent 50%,#fbf1ae 0%)}
+.dir-body p{font-size:13px;line-height:2.1;color:#333;margin-bottom:12px}
+.dir-sig{font-size:14px;font-weight:900;color:#222;border-top:2px solid #f0d9c8;padding-top:14px;margin-top:16px}
+.dir-sig small{display:block;font-size:11px;font-weight:400;color:#888;margin-top:4px}
+
+/* ===== 症状 ===== */
+#symptoms{padding:72px 0;background:#fff}
+.s-tags{display:flex;flex-wrap:wrap;gap:10px}
+.s-tags .tag{padding:10px 18px;background:#fff5ee;border:2px solid #f0d9c8;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
+.s-tags .tag:hover{background:#f0540c;color:#fff;border-color:#f0540c}
+
+/* ===== 料金 ===== */
+#price{padding:72px 0;background:#f9f3e8}
+.price-table{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #f0d9c8}
+.price-row{display:flex;align-items:center;padding:16px 20px;border-top:1px solid #f0d9c8;gap:12px}
+.price-row:first-child{border-top:4px solid #f0540c}
+.price-row:nth-child(even){background:#fff8f4}
+.price-row .p-label{font-weight:700;font-size:14px;flex:1}
+.price-row .p-note{font-size:11px;color:#888;flex:1.5}
+.price-row .p-price{font-size:20px;font-weight:900;color:#f0540c;white-space:nowrap;flex-shrink:0}
+.price-note{margin-top:12px;padding:14px 18px;background:#fff;border-left:4px solid #f0540c;border-radius:0 6px 6px 0;font-size:13px;color:#555;line-height:1.8}
+
+/* ===== FAQ ===== */
+#faq{padding:72px 0;background:#fff}
+.faq-list{border:1px solid #f0d9c8;border-radius:8px;overflow:hidden}
+.faq-item{border-top:1px solid #f0d9c8}
+.faq-item:first-child{border-top:4px solid #f0540c}
+.faq-q{display:flex;align-items:center;gap:12px;padding:18px 20px;cursor:pointer;background:#fff;font-weight:700;font-size:14px;justify-content:space-between}
+.q-badge{width:28px;height:28px;background:#f0540c;color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;flex-shrink:0}
+.faq-q .arrow{font-size:22px;color:#f0540c;transition:transform .2s;flex-shrink:0;font-weight:300;line-height:1}
+.faq-q.open .arrow{transform:rotate(45deg)}
+.faq-q.open{background:#fff5ee}
+.faq-a{display:none;padding:0 20px 18px 60px}
+.faq-a.open{display:flex;gap:12px;align-items:flex-start}
+.a-badge{width:28px;height:28px;background:#fff5ee;color:#f0540c;border:2px solid #f0540c;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:13px;flex-shrink:0;margin-top:2px}
+.faq-a p{font-size:13px;line-height:1.9;color:#555}
+
+/* ===== LINE バナー ===== */
+#line-bnr{padding:36px 20px;background:#fff}
+.line-bnr-box{max-width:840px;margin:0 auto;background:linear-gradient(135deg,#06c755 0%,#04a346 100%);border-radius:12px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.line-bnr-box .txt p{font-size:12px;color:rgba(255,255,255,.85);margin-bottom:6px}
+.line-bnr-box .txt h3{font-size:22px;font-weight:900;color:#fff;line-height:1.4}
+.line-bnr-box .txt span{font-size:12px;color:rgba(255,255,255,.8);display:block;margin-top:4px}
+.line-bnr-box .line-go{flex-shrink:0;padding:14px 28px;background:#fff;color:#06c755;border-radius:8px;font-weight:900;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+
+/* ===== アクセス ===== */
+#access{padding:64px 0;background:#2a2a2a}
+.access-inner{max-width:840px;margin:0 auto;padding:0 24px}
+.access-map{margin-bottom:32px;border-radius:8px;overflow:hidden;border:2px solid rgba(240,84,12,.25)}
+.access-map iframe,.access-map img{width:100%;height:380px;object-fit:cover;display:block;border:none}
+.access-map-ph{width:100%;height:380px;background:#1e1e1e;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#555;font-size:13px;text-align:center;line-height:1.8}
+.access-map-ph .map-icon{font-size:48px}
+.access-hx{text-align:center;margin-bottom:6px}
+.access-hx span{font-size:24px;font-weight:900;color:#fff}
+.access-sub{text-align:center;font-size:13px;color:#999;margin-bottom:28px}
+.access-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.access-col h3{font-size:14px;font-weight:700;color:#f0540c;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid rgba(240,84,12,.3)}
+.access-col p{font-size:13px;color:#bbb;line-height:1.9}
+.access-tel{font-size:22px;font-weight:900;color:#fff;letter-spacing:.03em;line-height:1;margin-bottom:4px}
+.access-hours{font-size:11px;color:#888;margin-bottom:14px}
+.hours-grid{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13px}
+.hours-grid .d{color:#fff;font-weight:700}
+.hours-grid .t{color:#bbb}
+.hours-grid .closed{color:#555}
+.a-line-btn{display:block;padding:12px;background:#06c755;color:#fff;text-align:center;border-radius:6px;font-weight:700;font-size:14px;margin-bottom:8px}
+.a-tel-btn{display:block;padding:12px;background:#f0540c;color:#fff;text-align:center;border-radius:6px;font-weight:700;font-size:14px}
+
+/* ===== 最終CTA ===== */
+#final{background:#f0540c;padding:80px 20px;text-align:center}
+#final h2{font-size:30px;font-weight:900;color:#fff;line-height:1.55;margin-bottom:16px}
+#final p{font-size:15px;color:rgba(255,255,255,.9);margin-bottom:36px;line-height:1.9}
+#final .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+#final .btn-l{padding:20px 40px;background:#06c755;color:#fff;border-radius:8px;font-weight:900;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+#final .btn-t{padding:20px 40px;background:#fff;color:#f0540c;border-radius:8px;font-weight:900;font-size:16px;box-shadow:0 6px 20px rgba(0,0,0,.15)}
+
+/* ===== FOOTER ===== */
+footer{background:#111;color:#666;padding:24px 20px;font-size:12px}
+.ft-inner{max-width:840px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer a{color:#666}
+footer a:hover{color:#f0540c}
+
+/* =========================================
+   モバイル対応 (〜768px)
+   ========================================= */
+@media(max-width:768px){
+  /* ヘッダー */
+  .hd-nav{display:none}
+  .hd-tel-block .tel{font-size:16px}
+  .hd-btn-line,.hd-btn-tel{padding:8px 10px;font-size:11px}
+
+  /* FV */
+  .visual-img{aspect-ratio:3/4}
+  .visual-copy h2{font-size:32px}
+  .visual-copy p{font-size:14px;margin-bottom:20px}
+  .visual-copy .cta-wrap a{padding:14px 22px;font-size:14px;width:100%}
+  .visual-copy .cta-wrap{flex-direction:column;gap:10px}
+
+  /* 実績 */
+  .achievement .nums{grid-template-columns:repeat(2,1fr)}
+  .achievement .nums .item:nth-child(2){border-right:none}
+  .achievement .nums .item:nth-child(3){border-right:1px solid #f0d0c0}
+  .achievement .nums .item .n{font-size:28px}
+
+  /* 電話CTA */
+  .tel-cta .num{font-size:38px}
+  .tel-cta .line-link{padding:14px 24px;font-size:15px}
+
+  /* 共通 */
+  .inner{padding:0 16px}
+
+  /* コミック */
+  #comic{padding:52px 0}
+  .comic-hd{padding:0 16px 24px}
+  .comic-hd h2{font-size:18px}
+  .comic-swiper{padding:0 16px 40px}
+
+  /* 口コミ */
+  #kchkm{padding:52px 0}
+  .tab-nav li a{font-size:11px;padding:10px 4px}
+
+  /* チェックリスト */
+  #checklist{padding:52px 0}
+  #checklist h2{font-size:22px}
+  .check-grid{grid-template-columns:1fr}
+  .cl-result{padding:22px 20px}
+  .cl-big{font-size:18px}
+
+  /* 腸腰筋 */
+  #choyokin{padding:52px 0}
+  #choyokin .sec-hd h2{font-size:22px}
+  .why-blocks{grid-template-columns:1fr;gap:12px;margin-bottom:36px}
+  .method-wrap{padding:28px 20px}
+  .method-hd h3{font-size:20px}
+  .method-steps{grid-template-columns:1fr;gap:12px}
+
+  /* 8つの安心 */
+  #point{padding:52px 0}
+  .box h3{width:100%;float:none;font-size:17px;margin-bottom:10px}
+  .box .box-img{width:100%;float:none;margin-right:0;margin-bottom:14px;aspect-ratio:16/9}
+  .box .box-text{width:100%;float:none}
+
+  /* 施術の流れ */
+  #flow{padding:52px 0}
+  .flow-item{padding:20px 16px}
+  .flow-item-inner{flex-direction:column}
+  .flow-item .f-img{width:100%;aspect-ratio:16/9}
+  .flow-item .f-title{font-size:16px}
+
+  /* 院長 */
+  #director{padding:52px 0}
+  .director-card{grid-template-columns:1fr;gap:20px;padding:24px 20px}
+
+  /* 症状・料金・FAQ */
+  #symptoms,#price,#faq{padding:52px 0}
+  .price-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .price-row .p-price{font-size:22px}
+
+  /* LINE */
+  .line-bnr-box{flex-direction:column;text-align:center;padding:24px 20px}
+  .line-bnr-box .line-go{width:100%;text-align:center}
+
+  /* アクセス */
+  .access-grid{grid-template-columns:1fr;gap:24px}
+  .access-map iframe,.access-map img,.access-map-ph{height:260px}
+
+  /* 最終CTA */
+  #final{padding:56px 16px}
+  #final h2{font-size:22px}
+  #final .btn-l,#final .btn-t{width:100%;padding:18px;font-size:15px}
+  #final .btns{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header id="top">
+  <div class="hd-inner">
+    <div class="hd-logo">
+      <div class="logo-icon">内</div>
+      <div class="logo-txt">
+        <h1>内外整骨院</h1>
+        <p>池田市 ・ 腰痛専門整骨院</p>
+      </div>
+    </div>
+    <nav class="hd-nav">
+      <a href="#point">8つの安心</a>
+      <a href="#kchkm">口コミ</a>
+      <a href="#flow">流れ</a>
+      <a href="#price">料金</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <div class="hd-contact">
+      <div class="hd-tel-block">
+        <div class="tel">072-737-6444</div>
+        <div class="hours">平日 8:30〜20:00 ／ 土 〜17:00</div>
+      </div>
+      <a href="#" class="hd-btn-line">LINE予約</a>
+      <a href="tel:0727376444" class="hd-btn-tel">☎ 電話</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== FV ========== -->
+<!-- FV画像: 同フォルダに fv.jpg を置くと自動で表示されます -->
+<div id="visual">
+  <div class="visual-img">
+    <div class="visual-copy">
+      <div class="eyebrow">のべ6万人以上 ｜ Google口コミ 4.9★ ｜ 新規紹介率60%以上</div>
+      <h2>腰痛治療するなら<br><em>内外整骨院</em></h2>
+      <p>夜20時まで受付 ／ 池田駅 徒歩3分 ／ 完全予約制</p>
+      <div class="cta-wrap">
+        <a href="#" class="cta-line">＼ LINEで24時間予約・相談</a>
+        <a href="tel:0727376444" class="cta-tel">☎ 072-737-6444</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== 実績バナー ========== -->
+<section class="main-bnr">
+  <div class="inner">
+    <div class="achievement">
+      <div class="nums">
+        <div class="item"><div class="n">6万<sub>人以上</sub></div><div class="l">延べ治療実績</div></div>
+        <div class="item"><div class="n">4.9<sub>★</sub></div><div class="l">Google口コミ 341件</div></div>
+        <div class="item"><div class="n">60<sub>%以上</sub></div><div class="l">新規紹介率</div></div>
+        <div class="item"><div class="n">20<sub>年以上</sub></div><div class="l">院長臨床歴</div></div>
+      </div>
+      <div class="photo">
+        <div class="ph-icon">📸</div>
+        患者さまとの写真（提供後に差し込み）
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 電話CTA ========== -->
+<div class="tel-cta">
+  <p class="ttl">まずはお気軽にご相談ください ／ 当日予約も受付中</p>
+  <a href="tel:0727376444" class="num">072-737-6444</a>
+  <p class="hours">受付時間：平日 8:30〜19:30 ／ 土曜 8:30〜17:00 ／ 木・日 休診</p>
+  <a href="#" class="line-link">＼ LINEで24時間 予約・相談する</a>
+</div>
+
+<!-- ========== コミック ========== -->
+<section id="comic">
+  <div class="comic-hd">
+    <h2>「どこに行っても治らなかった腰痛が、<br><em>なぜここで変わるのか</em>」</h2>
+    <p>実際の患者さまのエピソードをもとにした事例漫画です</p>
+  </div>
+  <div class="comic-swiper swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-img"><div class="slide-num">1</div>漫画①（画像差し込み）</div>
+        <div class="slide-cap">
+          <strong>「朝、起き上がれない」</strong>
+          <p>何年も腰痛に悩む田中さん（仮名・58歳）。整形外科では「異常なし」と言われ、整骨院を5軒転々としたが一向に改善しなかった。</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-img"><div class="slide-num">2</div>漫画②（画像差し込み）</div>
+        <div class="slide-cap">
+          <strong>「触れたのは腰ではなかった」</strong>
+          <p>同業者の先生から「ここだけは違う」と紹介されて来院。院長が手を当てたのはお腹の奥——想像もしない場所だった。</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-img"><div class="slide-num">3</div>漫画③（画像差し込み）</div>
+        <div class="slide-cap">
+          <strong>「今まで何やったんやろう」</strong>
+          <p>3回目の施術後、朝の激痛が消えていた。2ヶ月後には階段を一段飛ばしで。これがのべ6万人が経験した変化だった。</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- ========== 口コミ ========== -->
+<section id="kchkm">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>患者さまの声・口コミ</span></h2>
+    <p class="sec-sub">Google口コミ <strong style="color:#f0540c">4.9★</strong>（341件）／ 実際にご来院された患者さまの声</p>
+    <ul class="tab-nav" id="tab-nav">
+      <li class="active"><a href="#" data-tab="tab1">Googleの口コミ①</a></li>
+      <li><a href="#" data-tab="tab2">Googleの口コミ②</a></li>
+      <li><a href="#" data-tab="tab3">患者さまの声</a></li>
+      <li><a href="#" data-tab="tab4">エキテン口コミ</a></li>
+    </ul>
+    <div id="tab1" class="tab-pane active">
+      <div class="review-list">
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">T.H. 様</span></div><p>他ではほとんどアプローチしない腸腰筋の施術をメインにされており非常に効果がありました。妻もこちらでお世話になってから随分と体調が改善されました。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">おぎたに さきこ 様</span></div><p>1ヶ月が過ぎる頃には膝の痛みはすっかり消え、歩くときもびっこを引かなくなりました。身体はすべて繋がっているのだという観点から常に全身を診てくださります。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">山川 友里子 様</span></div><p>フラダンスのイベントまでに何とかしてほしいと藁をも掴む思いでお願いしました。イベントではほとんど違和感なく踊る事ができて、今では全く痛みや違和感もありません。</p></div>
+      </div>
+      <div class="google-btn"><a href="#">Googleマップで口コミをすべて見る →</a></div>
+    </div>
+    <div id="tab2" class="tab-pane">
+      <div class="review-list">
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">濱田 嗣 様</span></div><p>長年悩まされていた痛みが、脳脊髄液調整法と背骨の矯正を受ける事によって改善しました。もっと早く来院すれば良かったと思っています。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">ぷぅ汰くん 様</span></div><p>5ヶ月位で重症だった左足がまともに歩ける状態まで回復し、睡眠もとれるし、犬の散歩も行けるし、仕事も続けられています。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">Rakuma Miho 様</span></div><p>施術後はスッキリしその夜はぐっすり眠ることができます。問題のあるところと原因を的確に指摘して頂き、少しずつ症状が出る頻度が減ってきました。</p></div>
+      </div>
+      <div class="google-btn"><a href="#">Googleマップで口コミをすべて見る →</a></div>
+    </div>
+    <div id="tab3" class="tab-pane">
+      <div class="review-list">
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">西畠 勲造 様</span></div><p>20年くらい前から左足が痛だるい感じが付きまとい、国外でいろんなマッサージを受けてきたが、ここで受けて2か月くらいたったら「今までなんやったんやろう？」というくらい足が動くようになった。階段も一段飛ばしで登れるように。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">匿名希望 様</span></div><p>整形外科で手術を勧められていましたが、こちらに通い始めてから症状がみるみる改善し、今では手術の必要がなくなりました。本当に感謝しています。</p></div>
+        <div class="review-card"><div class="review-meta"><span class="r-stars">★★★★★</span><span class="r-name">田中 様</span></div><p>どこに行っても改善しなかった腰痛が、こちらでは3回目の施術から明らかに変化を感じました。院長先生の説明も丁寧で、原因がよく分かり安心して通えています。</p></div>
+      </div>
+    </div>
+    <div id="tab4" class="tab-pane">
+      <div class="ekiten-score">
+        <a href="https://www.ekiten.jp/shop_69795969/" target="_blank" rel="noopener" class="ekiten-score-link">
+          <span class="ekiten-logo">エキテン</span>
+          <span class="ekiten-stars">★★★★★</span>
+          <span class="ekiten-num">4.68</span>
+          <span class="ekiten-count">（51件）</span>
+          <span class="ekiten-arrow">口コミをすべて見る →</span>
+        </a>
+      </div>
+      <div class="ekiten-widget-slot">
+        <!-- エキテン ウィジェット（管理画面から取得したコードをここに貼る） -->
+        <p class="widget-ph-txt">※ エキテン管理画面のウィジェットコードをここに貼り付けてください</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 症状チェックリスト ========== -->
+<section id="checklist">
+  <div class="inner" style="text-align:center">
+    <div class="cl-badge">あなたは大丈夫？</div>
+    <h2>こんな腰痛、<em>ひとつでも</em>当てはまりませんか？</h2>
+    <div class="check-grid">
+      <div class="check-item"><span class="ci">✓</span>何年も腰痛が続いている</div>
+      <div class="check-item"><span class="ci">✓</span>複数の病院・整骨院を転々としても改善しない</div>
+      <div class="check-item"><span class="ci">✓</span>病院で「レントゲン異常なし」と言われた</div>
+      <div class="check-item"><span class="ci">✓</span>痛み止め・湿布が手放せない</div>
+      <div class="check-item"><span class="ci">✓</span>朝起き上がるのがつらい・腰が重い</div>
+      <div class="check-item"><span class="ci">✓</span>長時間座っていると腰・お尻が痛くなる</div>
+      <div class="check-item"><span class="ci">✓</span>歩くと腰が重い・足にしびれがある</div>
+      <div class="check-item"><span class="ci">✓</span>マッサージ後は楽だが、すぐ元の状態に戻る</div>
+    </div>
+    <div class="cl-result">
+      <p>ひとつでも当てはまるなら、</p>
+      <p class="cl-big">その腰痛は<em>腸腰筋</em>が原因かもしれません</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 腸腰筋セクション ========== -->
+<section id="choyokin">
+  <div class="inner">
+    <div class="sec-hd">
+      <h2>なぜ、<em>腸腰筋</em>なのか。<br>なぜ、他では良くならなかったのか。</h2>
+      <p>内外整骨院が「どこに行っても治らない」を改善できる理由</p>
+    </div>
+    <div class="why-blocks">
+      <div class="why-block">
+        <div class="wb-tag">REASON 01</div>
+        <h3>なぜ、腸腰筋なのか。</h3>
+        <p>腸腰筋は、骨盤と背骨を内側から支え、姿勢・呼吸・内臓の働きにも関わる、身体の<strong>"土台"</strong>となる筋肉です。<br><br>この腸腰筋が緊張したままだと、骨格を整えても、マッサージをしても、身体はすぐに元の状態へ戻ろうとします。</p>
+      </div>
+      <div class="why-block">
+        <div class="wb-tag">REASON 02</div>
+        <h3>なぜ、他では良くならなかったのか。</h3>
+        <p>これまで受けてきた施術が間違っていた、というわけではありません。<br><br>多くの場合、痛みのある場所や歪んで見える骨格だけを整えても、<strong>身体を内側から引っ張り続けている力</strong>が残っていることがあります。その力の一つが、腸腰筋の収縮です。</p>
+      </div>
+      <div class="why-block">
+        <div class="wb-tag">REASON 03</div>
+        <h3>では、内外整骨院では何をどうするのか。</h3>
+        <p>内外整骨院では、腸腰筋を軸に、骨盤・背骨・内臓・神経のつながりを<strong>一つの流れとして捉えています。</strong><br><br>「戻る力」を先に解放することから始め、身体が無理なく元気を取り戻す土台を整えます。下記の3ステップがその答えです。</p>
+      </div>
+      <div class="why-block">
+        <div class="wb-tag">REASON 04</div>
+        <h3>どんな人が来ているのか。</h3>
+        <p>来院される方の多くは、<strong>病院で「異常なし」と言われた方や、整体・マッサージを繰り返しても改善しなかった方</strong>です。<br><br>30代〜90代まで幅広く、腰痛・坐骨神経痛・慢性的な体の重さを抱えたまま、最後の頼りとして来られる方が多くいらっしゃいます。新規患者の60%以上が既存患者からのご紹介です。</p>
+      </div>
+    </div>
+    <div class="method-wrap">
+      <div class="method-hd">
+        <p>内外整骨院 独自メソッド</p>
+        <h3>腸腰筋アプローチ <em>3ステップ</em></h3>
+      </div>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="step-num">STEP 01</div>
+          <div class="step-icon">🔓</div>
+          <h4>腸腰筋の収縮を緩める</h4>
+          <p>痛みの出ている場所ではなく、まず身体の土台となる腸腰筋の収縮を解放。内側から骨盤と背骨が動ける状態をつくります。</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">STEP 02</div>
+          <div class="step-icon">🫁</div>
+          <h4>内臓のストレスを整える</h4>
+          <p>筋肉の緊張と連動して負担がかかっている内臓のストレスも含めて整え、身体が無意識に力を入れ続ける状態を解除します。</p>
+        </div>
+        <div class="method-step">
+          <div class="step-num">STEP 03</div>
+          <div class="step-icon">🔄</div>
+          <h4>骨格が自然に再構築される</h4>
+          <p>骨格を「押し戻す」のではなく、自然に再構築される状態へと導き、循環が起こりやすい身体環境を整えていきます。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- セミナー実績 -->
+    <div class="seminar-wrap">
+      <div class="seminar-tag">SEMINAR</div>
+      <h3>平成医療学園専門学校にて<br>技術セミナーを開催しました</h3>
+      <p class="seminar-subtitle">「経験したから解る！腰痛、膝痛に効く腸腰筋テクニック」</p>
+      <div class="seminar-photos">
+        <img src="https://ikeda-daiichi.com/wp-content/uploads/2024/01/IMG_3880-2-300x225.jpg" alt="腸腰筋セミナー風景1">
+        <img src="https://ikeda-daiichi.com/wp-content/uploads/2024/01/IMG_3889-2-300x225.jpg" alt="腸腰筋セミナー風景2">
+      </div>
+      <p>院長・清水の出身校である平成医療学園専門学校にて、当院独自の腸腰筋テクニックのセミナーを開催しました。専門学校の松本先生の頭痛を清水が改善したご縁から実現したもので、多くの先生方に技術をお伝えすることができました。</p>
+      <div class="seminar-photos-3">
+        <img src="https://ikeda-daiichi.com/wp-content/uploads/2024/01/IMG_3878-2-225x300.jpg" alt="腸腰筋セミナー風景3">
+        <img src="https://ikeda-daiichi.com/wp-content/uploads/2024/01/IMG_3865-225x300.jpg" alt="腸腰筋セミナー風景4">
+        <img src="https://ikeda-daiichi.com/wp-content/uploads/2024/01/IMG_3866-225x300.jpg" alt="腸腰筋セミナー風景5">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== 8つの安心 ========== -->
+<section id="point">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>内外整骨院 8つの安心</span></h2>
+    <p class="sec-sub">「なぜここだけ違うのか」——同業者・患者さまからよく聞かれる問いへの、8つの答え。</p>
+    <div class="point-bg">
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 01</div>
+        <h3><span class="yellow-line">健康保険が<span class="f-color">使えます！</span></span></h3>
+        <div class="box-img">💳</div>
+        <p class="box-text">急性のぎっくり腰・外傷・寝違いなど保険適用の症状は健康保険でご対応できます。自己負担を最小限に抑えて、しっかりと改善を目指しましょう。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 02</div>
+        <h3><span class="yellow-line">「異常なし」と言われた方も<span class="f-color">来院できます！</span></span></h3>
+        <div class="box-img">🔬</div>
+        <p class="box-text">「病院でレントゲンを撮ったが異常なし」という方も施術を受けていただけます。当院ではレントゲンに映らない骨格の歪みや筋肉の深部ダメージに直接アプローチします。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 03</div>
+        <h3><span class="yellow-line">病院・整形外科との<span class="f-color">併院もOK！</span></span></h3>
+        <div class="box-img">🏥</div>
+        <p class="box-text">病院との併用、転院、どちらも大歓迎です。「痛み止めは病院で、根本改善は当院で」という使い方も可能です。それぞれのメリットを最大限に活かして改善を目指します。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 04</div>
+        <h3><span class="yellow-line">平日は<span class="f-color">夜20時まで</span>受付！</span></h3>
+        <div class="box-img">🌙</div>
+        <p class="box-text">お仕事帰りでも安心。平日8:30〜20:00まで受付。完全予約制で待ち時間はありません。「仕事が終わる時間が不規則」な方も安心してご利用ください。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 05</div>
+        <h3><span class="yellow-line"><span class="f-color">土曜日</span>も診療！</span></h3>
+        <div class="box-img">📅</div>
+        <p class="box-text">土曜日も8:30〜17:00まで診療しています。平日がお仕事の方は土曜のお休みを利用してご来院いただけます。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 06</div>
+        <h3><span class="yellow-line">同業者も<span class="f-color">紹介する技術力！</span></span></h3>
+        <div class="box-img">🏆</div>
+        <p class="box-text">他の整骨院の先生・医師からの紹介が絶えません。新規患者の60%以上がご紹介。「自分では改善できない患者さまをここに送る」という同業者からの信頼が、当院の技術の証です。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 07</div>
+        <h3><span class="yellow-line">専門学校で<span class="f-color">セミナー講師実績あり！</span></span></h3>
+        <div class="box-img">📚</div>
+        <p class="box-text">平成医療学園専門学校にて「腰痛、膝痛に効く腸腰筋テクニック」セミナーを開催。プロに教える技術を、患者さまに提供しています。</p>
+      </div>
+
+      <div class="box clearfix">
+        <div class="icon-num">POINT 08</div>
+        <h3><span class="yellow-line"><span class="f-color">国家資格者</span>が全施術を担当！</span></h3>
+        <div class="box-img">✅</div>
+        <p class="box-text">厚生労働大臣認可の柔道整復師・CSFプラクティス認定治療家が、すべての施術を責任を持って担当します。経験20年以上の院長が直接施術にあたります。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 施術の流れ ========== -->
+<section id="flow">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>ご予約から施術完了までの流れ</span></h2>
+    <p class="sec-sub">初めてのご来院でも安心。丁寧にご説明しながら進めます。</p>
+    <div class="flow-list-col">
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">01</div><span class="f-title">カルテ記入</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">まず、カルテ（問診表）に症状などの記入をお願いします。辛いところ、普段悩んでいること等をお書きください。その後、カウンセリングで詳しくお話を伺いますので、書ける範囲で構いません。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/12/20250715-E6R_9626-300x200.jpg" alt="カルテ記入"></div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">02</div><span class="f-title">カウンセリング</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">症状や困っていることなどを伺います。現在の症状、お悩み、不安など、どんな些細な事でも結構です。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/10/20250715-E6R_9733-300x200.jpg" alt="カウンセリング"></div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">03</div><span class="f-title">症状説明</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">お身体の不調がどのようにして出ているのかを可能な限りわかりやすくお伝えします。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/12/20250715-E6R_9751-300x200.jpg" alt="症状説明"></div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">04</div><span class="f-title">施術実施</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">根本の原因に対して施術を行っていきます。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/10/20250715-E6R_9525-300x200.jpg" alt="施術実施"></div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">05</div><span class="f-title">変化確認と説明</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">施術後の身体の変化をチェックし共有しつつお伝えします。また、今後の通院計画や、「セルフケア」について、お話をさせていただきます。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/12/20250715-E6R_9738-1-300x200.jpg" alt="変化確認と説明"></div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-item-head"><div class="f-num">06</div><span class="f-title">会計・お支払い</span></div>
+        <div class="flow-item-inner">
+          <p class="f-body">当院は病院と同様に健康保険を利用できます。症状によって改善をより早くするための特別自費メニューも完備しております。</p>
+          <div class="f-img"><img src="https://ikeda-daiichi.com/wp-content/uploads/2025/12/20250715-E6R_9638-300x200.jpg" alt="会計・お支払い"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== 院長 ========== -->
+<section id="director">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>院長ご挨拶</span></h2>
+    <div class="director-card clearfix">
+      <div class="dir-photo"><span class="ph">👨‍⚕️</span>院長ポートレート<br>（写真差し込み）</div>
+      <div class="dir-body">
+        <h2>私もかつて、<br><em>悩める一人の患者</em>でした。</h2>
+        <p>院長である私自身が胃潰瘍になり、膝を壊して将来に不安を抱えた時期がありました。整形外科では遠回しに「諦めなさい」と伝えられ、家族の不調では途方に暮れたこともあります。</p>
+        <p>必死に改善のために動き回り、藁をも縋る思いで学び続けた結果、今では家族で過ごせる日々があります。この経験があったからこそ、「どこに行っても治らない」というお気持ちが痛いほどわかります。</p>
+        <p>もしわずかでもご興味を持っていただけたなら、お話だけでもしに来てください。あなたの人生に貢献できるなら、こんな幸せなことはありません。</p>
+        <div class="dir-sig">内外整骨院 院長 — 清水 学<small>厚生労働大臣認可 柔道整復師 ／ CSFプラクティス認定治療家 ／ 臨床歴20年以上</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 症状 ========== -->
+<section id="symptoms">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>対応している主な症状</span></h2>
+    <div class="s-tags">
+      <span class="tag">腰痛・ぎっくり腰</span><span class="tag">ヘルニア</span><span class="tag">脊柱管狭窄症</span>
+      <span class="tag">坐骨神経痛</span><span class="tag">頭痛・偏頭痛</span><span class="tag">自律神経の乱れ</span>
+      <span class="tag">不眠・めまい</span><span class="tag">産後の骨盤</span><span class="tag">五十肩</span>
+      <span class="tag">膝の痛み</span><span class="tag">股関節痛</span><span class="tag">交通事故後</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 料金 ========== -->
+<section id="price">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>料金について</span></h2>
+    <div class="price-table">
+      <div class="price-row"><div class="p-label">初診</div><div class="p-note">問診 + カウンセリング + 施術込み</div><div class="p-price">4,400円〜</div></div>
+      <div class="price-row"><div class="p-label">通常施術（自費）</div><div class="p-note">腸腰筋調整 + 骨格調整 + CSF / 30〜45分</div><div class="p-price">6,600円</div></div>
+      <div class="price-row"><div class="p-label">健康保険施術</div><div class="p-note">急性症状・外傷・ぎっくり腰等</div><div class="p-price">500円〜</div></div>
+      <div class="price-row"><div class="p-label">特別自費メニュー</div><div class="p-note">改善を早めたい方向け</div><div class="p-price">8,800円〜</div></div>
+    </div>
+    <p class="price-note">※料金は目安です。詳細は初診カウンセリングにてご案内します。現金・クレジットカード・電子マネー対応。</p>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>よくある質問</span></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><div style="display:flex;align-items:center;gap:12px"><div class="q-badge">Q</div><span>何回くらいで効果が出ますか？</span></div><span class="arrow">+</span></div>
+        <div class="faq-a"><div class="a-badge">A</div><p>急性のぎっくり腰などは1〜3回で大きな変化を感じる方が多いです。慢性症状は週2回ペースで1〜3ヶ月を目安にお考えください。初診時に改善の見通しをお伝えします。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div style="display:flex;align-items:center;gap:12px"><div class="q-badge">Q</div><span>痛みのある施術ですか？</span></div><span class="arrow">+</span></div>
+        <div class="faq-a"><div class="a-badge">A</div><p>腸腰筋は普段押されることのない深層筋のため、初回はくすぐったさや響きを感じる方もいます。ただし我慢が必要な施術ではありません。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div style="display:flex;align-items:center;gap:12px"><div class="q-badge">Q</div><span>健康保険は使えますか？</span></div><span class="arrow">+</span></div>
+        <div class="faq-a"><div class="a-badge">A</div><p>はい。急性の外傷・ぎっくり腰・寝違いなど、保険適用の症状については健康保険をご利用いただけます。慢性症状は自費となります。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div style="display:flex;align-items:center;gap:12px"><div class="q-badge">Q</div><span>予約方法は？</span></div><span class="arrow">+</span></div>
+        <div class="faq-a"><div class="a-badge">A</div><p>LINEまたはお電話（072-737-6444）から。LINEなら24時間予約・変更が可能です。</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><div style="display:flex;align-items:center;gap:12px"><div class="q-badge">Q</div><span>子連れで通えますか？</span></div><span class="arrow">+</span></div>
+        <div class="faq-a"><div class="a-badge">A</div><p>キッズスペースをご用意しています。お子さま連れの患者さまも多数いらっしゃいます。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LINE バナー ========== -->
+<div id="line-bnr">
+  <div class="line-bnr-box">
+    <div class="txt">
+      <p>24時間いつでも受付中</p>
+      <h3>LINEで予約・相談する</h3>
+      <span>当日予約・キャンセル・症状相談もLINEで気軽に</span>
+    </div>
+    <a href="#" class="line-go">LINE予約はこちら →</a>
+  </div>
+</div>
+
+<!-- ========== アクセス ========== -->
+<section id="access">
+  <div class="access-inner">
+    <div class="access-hx"><span>アクセス・診療時間</span></div>
+    <p class="access-sub">阪急「池田駅」徒歩3分 ／ 朝8時30分から受付</p>
+    <!-- ↓ Googleマップ埋め込みの場合: <iframe src="..."> に差し替え / 写真の場合: <img src="access-map.jpg"> に差し替え -->
+    <div class="access-map">
+      <div class="access-map-ph">
+        <span class="map-icon">🗺️</span>
+        <span>Googleマップ埋め込み または 外観・アクセス写真<br>（iframeコード or access-map.jpg を差し込んでください）</span>
+      </div>
+    </div>
+    <div class="access-grid">
+      <div class="access-col">
+        <h3>所在地</h3>
+        <p>〒563-0055<br>大阪府池田市菅原町2-11<br>SKビル4F<br><br>阪急宝塚本線「池田駅」<br>から徒歩3分</p>
+      </div>
+      <div class="access-col">
+        <h3>診療時間</h3>
+        <div class="hours-grid">
+          <span class="d">月</span><span class="t">8:30〜20:00</span>
+          <span class="d">火</span><span class="t">8:30〜20:00</span>
+          <span class="d">水</span><span class="t">8:30〜20:00</span>
+          <span class="d">木</span><span class="t closed">休診</span>
+          <span class="d">金</span><span class="t">8:30〜20:00</span>
+          <span class="d">土</span><span class="t">8:30〜17:00</span>
+          <span class="d">日</span><span class="t closed">休診</span>
+        </div>
+      </div>
+      <div class="access-col">
+        <h3>ご予約・お問い合わせ</h3>
+        <div class="access-tel">072-737-6444</div>
+        <div class="access-hours">受付 平日 8:30〜19:30</div>
+        <a href="#" class="a-line-btn">LINEで予約・相談（24時間）</a>
+        <a href="tel:0727376444" class="a-tel-btn">☎ 電話で予約する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 最終CTA ========== -->
+<section id="final">
+  <h2>どこに行っても治らない症状で<br>真剣に悩んでいるなら</h2>
+  <p>ご相談いただければ、できる限り改善のお手伝いをいたします。<br>まずはお気軽にLINEまたはお電話からご連絡ください。</p>
+  <div class="btns">
+    <a href="#" class="btn-l">LINEで予約・相談（24時間）</a>
+    <a href="tel:0727376444" class="btn-t">☎ 072-737-6444</a>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="ft-inner">
+    <div>© 内外整骨院 NAIGAI SEIKOTSUIN · 2026</div>
+    <div style="display:flex;gap:20px">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">特定商取引法</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+new Swiper('.comic-swiper', {
+  loop: true,
+  pagination: { el: '.swiper-pagination', clickable: true },
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+});
+
+document.querySelectorAll('.tab-nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.dataset.tab;
+    document.querySelectorAll('.tab-nav li').forEach(li => li.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    a.parentElement.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  });
+});
+
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.classList.toggle('open');
+    q.nextElementSibling.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
