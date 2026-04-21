@@ -210,6 +210,23 @@ a{color:inherit;text-decoration:none}
 .s-tags .tag{padding:10px 18px;background:#fff5ee;border:2px solid #f0d9c8;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s}
 .s-tags .tag:hover{background:#f0540c;color:#fff;border-color:#f0540c}
 
+/* ===== 比較表 ===== */
+#comparison{padding:72px 0;background:#fff}
+.comp-wrap{overflow-x:auto}
+.comp-table{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
+.comp-table th,.comp-table td{padding:18px 14px;text-align:center;vertical-align:middle;line-height:1.75}
+.comp-th-empty{width:120px;background:transparent;border:none}
+.comp-th-byoin,.comp-th-tain{background:#d5d5d5;color:#333;font-weight:700;font-size:16px;border:1px solid #ccc}
+.comp-th-naigai{background:#f0540c;color:#fff;font-weight:900;font-size:22px;border:2px solid #f0540c}
+.comp-label{padding:10px 8px}
+.comp-label span{display:inline-block;background:#6db3e8;color:#fff;font-weight:900;font-size:14px;padding:10px 14px;border-radius:8px;line-height:1.55;min-width:80px}
+.comp-byoin,.comp-tain{background:#f7f7f7;border:1px solid #e0e0e0;color:#555;font-size:13px}
+.comp-table tbody tr:nth-child(even) .comp-byoin,
+.comp-table tbody tr:nth-child(even) .comp-tain{background:#fff}
+.comp-naigai{background:#fff8f5;border-left:2px solid #f0540c;border-right:2px solid #f0540c;border-top:1px solid #f9cdb8;border-bottom:1px solid #f9cdb8;font-size:14px;font-weight:600}
+.comp-naigai strong{background:linear-gradient(transparent 50%,#fbf1ae 0%);font-weight:900}
+.comp-table tbody tr:last-child .comp-naigai{border-bottom:2px solid #f0540c}
+
 /* ===== 料金 ===== */
 #price{padding:72px 0;background:#f9f3e8}
 .price-table{background:#fff;border-radius:8px;overflow:hidden;border:1px solid #f0d9c8}
@@ -350,6 +367,14 @@ footer a:hover{color:#f0540c}
   /* 院長 */
   #director{padding:52px 0}
   .director-card{grid-template-columns:1fr;gap:20px;padding:24px 20px}
+
+  /* 比較表 */
+  #comparison{padding:52px 0}
+  .comp-table th,.comp-table td{padding:12px 8px;font-size:12px}
+  .comp-th-naigai{font-size:16px}
+  .comp-th-byoin,.comp-th-tain{font-size:13px}
+  .comp-label span{font-size:12px;padding:8px 10px;min-width:60px}
+  .comp-naigai{font-size:12px}
 
   /* 症状・料金・FAQ */
   #symptoms,#price,#faq{padding:52px 0}
@@ -782,6 +807,52 @@ footer a:hover{color:#f0540c}
       <span class="tag">坐骨神経痛</span><span class="tag">頭痛・偏頭痛</span><span class="tag">自律神経の乱れ</span>
       <span class="tag">不眠・めまい</span><span class="tag">産後の骨盤</span><span class="tag">五十肩</span>
       <span class="tag">膝の痛み</span><span class="tag">股関節痛</span><span class="tag">交通事故後</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 比較表 ========== -->
+<section id="comparison">
+  <div class="inner">
+    <h2 class="sec-ttl"><span>病院・他院との違い</span></h2>
+    <p class="sec-sub">「なぜ内外整骨院だけ結果が違うのか」——3つの視点で比べてみてください。</p>
+    <div class="comp-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th class="comp-th-empty"></th>
+            <th class="comp-th-byoin">病院</th>
+            <th class="comp-th-naigai">当院</th>
+            <th class="comp-th-tain">他院</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="comp-label"><span>待ち時間</span></td>
+            <td class="comp-byoin">長い</td>
+            <td class="comp-naigai"><strong>完全優先制のため<br>待ち時間ほぼ無し</strong></td>
+            <td class="comp-tain">予約したのに<br>待たされた</td>
+          </tr>
+          <tr>
+            <td class="comp-label"><span>問診<br>カウンセリング</span></td>
+            <td class="comp-byoin">一方的な<br>説明だけだった</td>
+            <td class="comp-naigai">しっかりお聞きすることで<br><strong>より的確なアプローチ<br>を行います</strong></td>
+            <td class="comp-tain">あまり話を<br>聞いてくれなかった</td>
+          </tr>
+          <tr>
+            <td class="comp-label"><span>施術</span></td>
+            <td class="comp-byoin">治療行為<br>・レントゲン・投薬<br>・リハビリ・湿布<br>・注射など</td>
+            <td class="comp-naigai"><strong>オーダーメイド施術</strong><br>あなたの希望の<br>刺激量で施術します</td>
+            <td class="comp-tain">手技治療<br>ボキボキ・グリグリ<br>をする施術<br>無国家資格者</td>
+          </tr>
+          <tr>
+            <td class="comp-label"><span>効果</span></td>
+            <td class="comp-byoin">8割の方が改善せず<br>再発すると<br>言われている</td>
+            <td class="comp-naigai">即座に、もしくは<br>翌日など3日以内に<br><strong>痛み辛さやお悩みが改善</strong></td>
+            <td class="comp-tain">辛い痛みは<br>ほとんど改善しない</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
