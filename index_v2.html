@@ -37,20 +37,8 @@ a{color:inherit;text-decoration:none}
 
 /* ===== FV ===== */
 #visual{position:relative;overflow:hidden}
-.visual-img{
-  width:100%;aspect-ratio:16/7;
-  background-color:#1a1a1a;
-  background-image:url('fv.jpg');
-  background-size:cover;background-position:center top;
-  display:flex;align-items:center;justify-content:center;position:relative
-}
-.visual-img::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.52)}
-.visual-copy{position:relative;z-index:1;text-align:center;padding:40px 20px;width:100%}
-.visual-copy .eyebrow{display:inline-block;background:#f0540c;color:#fff;font-size:12px;font-weight:700;padding:5px 18px;border-radius:999px;letter-spacing:.1em;margin-bottom:20px}
-.visual-copy h2{font-size:48px;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.visual-copy h2 em{font-style:normal;background:linear-gradient(transparent 50%,rgba(251,241,174,.5) 0%);color:#fbf1ae}
-.visual-copy p{font-size:16px;color:rgba(255,255,255,.85);margin-bottom:28px;line-height:1.8}
-.visual-copy .cta-wrap{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.visual-img{width:100%;display:block;line-height:0}
+.visual-img img{width:100%;height:auto;display:block}
 .visual-copy .cta-wrap a{padding:16px 32px;border-radius:8px;font-weight:900;font-size:15px}
 .visual-copy .cta-line{background:#06c755;color:#fff;box-shadow:0 6px 20px rgba(6,199,85,.4)}
 .visual-copy .cta-tel{background:#f0540c;color:#fff;box-shadow:0 6px 20px rgba(240,84,12,.4)}
@@ -392,11 +380,16 @@ footer a:hover{color:#f0540c}
   .director-card{grid-template-columns:1fr;gap:20px;padding:24px 20px}
 
   #comparison{padding:52px 0}
-  .comp-table th,.comp-table td{padding:12px 8px;font-size:12px}
-  .comp-th-naigai{font-size:16px}
-  .comp-th-byoin,.comp-th-tain{font-size:13px}
-  .comp-label span{font-size:12px;padding:8px 10px;min-width:60px}
-  .comp-naigai{font-size:12px}
+  .comp-wrap{overflow-x:visible}
+  .comp-table,.comp-table thead,.comp-table tbody,.comp-table tr,.comp-table th,.comp-table td{display:block;width:100%}
+  .comp-table thead tr{display:none}
+  .comp-table tbody tr{background:#fff;border-radius:10px;overflow:hidden;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+  .comp-label{background:#1a3a5c;padding:12px 16px;text-align:left}
+  .comp-label span{font-size:14px;font-weight:900;color:#fff;background:none;padding:0;border-radius:0;min-width:auto}
+  .comp-byoin{text-align:left;padding:12px 16px;font-size:13px;line-height:1.7;border:none;background:#f7f7f7}
+  .comp-byoin::before{content:'整形外科';display:block;font-size:11px;font-weight:700;color:#888;margin-bottom:4px;letter-spacing:.05em}
+  .comp-naigai{text-align:left;padding:12px 16px;font-size:13px;line-height:1.7;border-left:4px solid #f0540c;border-right:none;border-top:none;border-bottom:none;background:#fff8f5}
+  .comp-naigai::before{content:'当院（整骨院）';display:block;font-size:11px;font-weight:700;color:#f0540c;margin-bottom:4px;letter-spacing:.05em}
 
   #price,#faq{padding:52px 0}
   .price-row{flex-direction:column;align-items:flex-start;gap:4px}
@@ -443,18 +436,12 @@ footer a:hover{color:#f0540c}
 </header>
 
 <!-- ========== FV ========== -->
-<!-- FV画像: 同フォルダに fv.jpg を置くと自動で表示されます -->
 <div id="visual">
   <div class="visual-img">
-    <div class="visual-copy">
-      <div class="eyebrow">交通事故後の治療 ｜ 自賠責保険で窓口負担0円 ｜ 当日受付OK</div>
-      <h2>交通事故後の痛み・後遺症<br>まず<em>内外整骨院</em>へご相談を</h2>
-      <p>むち打ち・腰痛・頭痛・しびれ — 自賠責保険が使えるので、あなたの負担は原則０円です。<br>池田駅 徒歩3分 ／ 夜20時まで受付 ／ 完全予約制</p>
-      <div class="cta-wrap">
-        <a href="#" class="cta-line">＼ LINEで24時間 無料相談</a>
-        <a href="tel:0727376444" class="cta-tel">☎ 072-737-6444</a>
-      </div>
-    </div>
+    <picture>
+      <source media="(max-width:599px)" srcset="fv_sp.jpg">
+      <img src="fv.jpg" alt="交通事故・むちうち施術は一番最初に内外整骨院へ">
+    </picture>
   </div>
 </div>
 
