@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>記事投稿｜内外整骨院 専用ブログ管理画面（デモ）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mockbar">これは <b>提案用デモ（側モック）</b> です ／ クリックで遷移します：
+  <a href="index.html">① コラム一覧</a><a href="article.html">② 記事ページ</a><a href="admin.html">③ 投稿画面</a><a href="admin-ai.html">④ AI承認型</a>
+</div>
+
+<div class="admin">
+  <!-- サイドナビ -->
+  <aside class="adm-side">
+    <div class="adm-brand"><div class="dot">内</div><div><b>内外整骨院</b><small>専用ブログ管理</small></div></div>
+    <nav class="adm-nav">
+      <a href="#"><span class="ic">▦</span>ダッシュボード</a>
+      <a href="#"><span class="ic">▤</span>記事一覧</a>
+      <a class="on" href="admin.html"><span class="ic">✎</span>新規投稿</a>
+      <a href="admin-ai.html"><span class="ic">✨</span>AI下書き（公開待ち）<span class="badge">3</span></a>
+      <a href="#"><span class="ic">🏷</span>カテゴリ</a>
+      <a href="#"><span class="ic">⚙</span>設定</a>
+    </nav>
+  </aside>
+
+  <!-- メイン -->
+  <main class="adm-main">
+    <div class="adm-top">
+      <h1>新規投稿</h1>
+      <div class="who">ログイン中：<b>清水 学 先生</b></div>
+    </div>
+
+    <div class="adm-wrap">
+      <div class="card-soft" style="background:var(--cream2);border-color:#f3d6c4">
+        <div style="font-weight:700;color:var(--orange);margin-bottom:4px">記事を書くことだけに集中いただけます</div>
+        <div style="font-size:13px;color:var(--gray)">サーバー・データベース・SSL・セキュリティ更新・バックアップは、すべて弊社（co-nect）が管理します。先生は下のフォームに入力して「公開する」を押すだけです。</div>
+      </div>
+
+      <div class="card-soft">
+        <div class="field">
+          <label>記事タイトル</label>
+          <input type="text" value="交通事故後のむちうち、放置するとどうなる？池田市の整骨院が解説">
+        </div>
+
+        <div class="field">
+          <label>カテゴリ</label>
+          <select>
+            <option>交通事故・むちうち</option>
+            <option>腰痛・慢性症状</option>
+            <option>保険・手続き</option>
+            <option>お知らせ</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>アイキャッチ画像 <span class="hint">アップロードした画像は自動で軽量化＆高速配信されます</span></label>
+          <div class="drop">＋ 画像をドラッグ＆ドロップ または クリックして選択<small>JPG・PNG対応 ／ 表示速度（SEO）は自動最適化</small></div>
+        </div>
+
+        <div class="field">
+          <label>本文</label>
+          <div class="toolbar">
+            <button title="見出し">H</button><button title="太字"><b>B</b></button>
+            <button title="斜体"><i>I</i></button><button title="リスト">≣</button>
+            <button title="画像">🖼</button><button title="リンク">🔗</button>
+          </div>
+          <textarea class="editor field-textarea" style="border-radius:0 0 10px 10px">交通事故の後、「最初は痛くなかったのに、数日経ってから首や肩が痛くなってきた」という方は少なくありません。これは、むちうち（頸椎捻挫）に典型的な経過です。
+
+この記事では、むちうちを放置するとどうなるのか、そして早めの対応がなぜ大切なのかを、池田市の内外整骨院がわかりやすく解説します。</textarea>
+        </div>
+
+        <div class="field">
+          <label>SEO設定（検索結果に表示される説明文）<span class="hint">空欄なら本文から自動生成</span></label>
+          <input type="text" value="交通事故後のむちうちを放置すると後遺症のリスクが。池田市の内外整骨院が症状経過・通院目安・自賠責対応を解説します。">
+        </div>
+
+        <div class="actions">
+          <button class="btn ghost">下書き保存</button>
+          <button class="btn ghost">プレビュー</button>
+          <button class="btn primary">公開する</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

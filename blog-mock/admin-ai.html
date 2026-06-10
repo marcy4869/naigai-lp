@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI下書き（公開待ち）｜内外整骨院 専用ブログ管理画面（デモ）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mockbar">これは <b>提案用デモ（側モック）</b> です ／ クリックで遷移します：
+  <a href="index.html">① コラム一覧</a><a href="article.html">② 記事ページ</a><a href="admin.html">③ 投稿画面</a><a href="admin-ai.html">④ AI承認型</a>
+</div>
+
+<div class="admin">
+  <aside class="adm-side">
+    <div class="adm-brand"><div class="dot">内</div><div><b>内外整骨院</b><small>専用ブログ管理</small></div></div>
+    <nav class="adm-nav">
+      <a href="#"><span class="ic">▦</span>ダッシュボード</a>
+      <a href="#"><span class="ic">▤</span>記事一覧</a>
+      <a href="admin.html"><span class="ic">✎</span>新規投稿</a>
+      <a class="on" href="admin-ai.html"><span class="ic">✨</span>AI下書き（公開待ち）<span class="badge">3</span></a>
+      <a href="#"><span class="ic">🏷</span>カテゴリ</a>
+      <a href="#"><span class="ic">⚙</span>設定</a>
+    </nav>
+  </aside>
+
+  <main class="adm-main">
+    <div class="adm-top">
+      <h1>AI下書き（公開待ち）</h1>
+      <div class="who">ログイン中：<b>清水 学 先生</b></div>
+    </div>
+
+    <div class="adm-wrap">
+      <div class="ai-banner">
+        <div class="em">✨</div>
+        <div>
+          <b>AIが記事と画像を自動生成 → 薬機法チェック → 先生が承認するだけ</b>
+          <p>完全自動ではなく「承認型」。公開前に必ず先生のチェックが入るので、医療広告ガイドライン違反や低品質な記事が公開される心配はありません。</p>
+        </div>
+      </div>
+
+      <div class="kpi">
+        <div class="k"><div class="n">8</div><div class="l">今月のAI下書き</div></div>
+        <div class="k"><div class="n">3</div><div class="l">公開待ち（要承認）</div></div>
+        <div class="k"><div class="n">5</div><div class="l">承認・公開済み</div></div>
+        <div class="k"><div class="n">100%</div><div class="l">薬機法チェック実施</div></div>
+      </div>
+
+      <!-- 承認OK例 -->
+      <div class="wait-card">
+        <div class="th"><img src="img/flow03.jpg" alt=""></div>
+        <div>
+          <span class="ai-tag">✨ AI生成 ・ 画像も自動生成</span>
+          <h3>事故直後にやるべき3つのこと｜自賠責保険で窓口負担0円にする手順</h3>
+          <div class="check ok"><b>✓</b><div>薬機法・医療広告ガイドライン チェック完了：<b>問題は見つかりませんでした。</b>そのまま公開いただけます。</div></div>
+          <div class="wait-actions">
+            <button class="btn approve">内容を確認して承認・公開</button>
+            <button class="btn ghost">編集する</button>
+            <button class="btn reject">却下</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 要修正例（ガードレールの価値を可視化） -->
+      <div class="wait-card">
+        <div class="th"><img src="img/point05.jpg" alt=""></div>
+        <div>
+          <span class="ai-tag">✨ AI生成 ・ 画像も自動生成</span>
+          <h3>腰痛が何度も再発する本当の理由｜腸腰筋へのアプローチ</h3>
+          <div class="check warn"><b>⚠</b><div><b>1件、表現の確認をおすすめします。</b>本文に「必ず改善します」という断定表現を検出しました。医療広告ガイドラインに配慮し「<b>改善が期待できます</b>」への修正を提案します。</div></div>
+          <div class="wait-actions">
+            <button class="btn primary">提案どおり修正して承認</button>
+            <button class="btn ghost">自分で編集</button>
+            <button class="btn reject">却下</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- もう1件OK -->
+      <div class="wait-card">
+        <div class="th"><img src="img/flow04.jpg" alt=""></div>
+        <div>
+          <span class="ai-tag">✨ AI生成 ・ 画像も自動生成</span>
+          <h3>むちうちの施術期間の目安は？通院ペースと完治までの流れ</h3>
+          <div class="check ok"><b>✓</b><div>薬機法・医療広告ガイドライン チェック完了：<b>問題は見つかりませんでした。</b></div></div>
+          <div class="wait-actions">
+            <button class="btn approve">内容を確認して承認・公開</button>
+            <button class="btn ghost">編集する</button>
+            <button class="btn reject">却下</button>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--gray);text-align:center;margin-top:10px">AIが下書きを用意し、先生は「ひと手間」加えて承認するだけ。記事作成の負担を大幅に減らしながら、質と信頼を守ります。</p>
+    </div>
+  </main>
+</div>
+</body>
+</html>
